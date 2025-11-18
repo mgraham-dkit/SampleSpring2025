@@ -1,4 +1,4 @@
-package daos.daos;
+package web_patterns.samplespring2025.persistence;
 
 import java.sql.Connection;
 

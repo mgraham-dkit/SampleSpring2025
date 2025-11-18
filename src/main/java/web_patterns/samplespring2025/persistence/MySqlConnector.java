@@ -1,6 +1,7 @@
-package daos.daos;
+package web_patterns.samplespring2025.persistence;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.io.FileInputStream;
 import java.io.IOException;

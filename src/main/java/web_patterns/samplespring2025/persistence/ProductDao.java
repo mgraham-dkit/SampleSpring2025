@@ -1,6 +1,7 @@
-package daos.daos;
+package web_patterns.samplespring2025.persistence;
 
-import daos.entities.Product;
+
+import web_patterns.samplespring2025.entities.Product;
 
 import java.sql.SQLException;
 import java.util.List;

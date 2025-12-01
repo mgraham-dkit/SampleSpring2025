@@ -56,4 +56,16 @@ public class UserController {
             );
         }
     }
+
+    @GetMapping("/secure")
+    public String secure(@RequestHeader("Authorization") String header) {
+        System.out.println("Header information: " + header);
+        String token = header.replace("Bearer ", "");
+
+        if (tokenMap.containsKey(token)) {
+            return "Hello " + tokenMap.get(token) + ", you're authenticated!";
+        }
+
+        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
+    }
 }

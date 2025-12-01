@@ -3,6 +3,16 @@ CREATE DATABASE IF NOT EXISTS classicmodels;
 
 USE classicmodels;
 
+/*Table structure for table users */
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+   userID int(11) AUTO_INCREMENT NOT NULL,
+   username varchar(20) UNIQUE NOT NULL,
+   password varchar(60) NOT NULL,
+   PRIMARY KEY  (userID)
+);
+
 /*Table structure for table employees */
 DROP TABLE IF EXISTS employees;
 CREATE TABLE employees (

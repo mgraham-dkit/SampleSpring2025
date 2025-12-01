@@ -1,5 +1,13 @@
 USE classicmodels;
 
+insert into users(userID, username, password) values
+(1,'athena', '$2a$12$MfrThbMXfkuVoaUKFc0gWO99v7iUGc/KmEhh0nOgbl5CjBu5719by'),
+(2, 'helo', '$2a$12$a/5xFCTok30DeFrLmBfP.OrqaQuRFMOxfCpM9Afh7tBI75.XTD1Nu'),
+(3, 'lee', '$2a$12$Z/KqOM412KpQFULhBf4HO.lToA5h.JfEt3XVHDG39TvbdmiLI4lJa'),
+(4,'kara', '$2a$12$NooVv89JXEJzRCYWQWprG.65qILtXoeEJpTeFckQ8h0XPANTCh7.y'),
+(5, 'laura', '$2a$12$ehUHP4FWuz6Z8fIxA3fCK.3TWcsaiaacZdJYsy5FU/kkH4lmt49fi');
+
+
 /*Data for the table `employees` */
 insert  into `employees`(`employeeNumber`,`lastName`,`firstName`,`extension`,`email`,`officeCode`,`reportsTo`,`jobTitle`) values 
 (1002,'Murphy','Diane','x5800','dmurphy@classicmodelcars.com','1',NULL,'President'),

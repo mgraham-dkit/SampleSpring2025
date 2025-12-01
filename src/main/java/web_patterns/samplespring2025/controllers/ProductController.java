@@ -5,10 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import web_patterns.samplespring2025.entities.Product;
-import web_patterns.samplespring2025.persistence.Connector;
-import web_patterns.samplespring2025.persistence.MySqlConnector;
-import web_patterns.samplespring2025.persistence.ProductDao;
-import web_patterns.samplespring2025.persistence.ProductDaoImpl;
 import web_patterns.samplespring2025.services.ProductService;
 
 import java.sql.SQLException;
@@ -24,11 +20,10 @@ public class ProductController {
 
     private ProductService productService;
 
-    public ProductController(){
-        // Manual configuration for now
-        Connector mySqlConnector = new MySqlConnector("properties/database.properties");
-        ProductDao productDao = new ProductDaoImpl(mySqlConnector);
-        this.productService = new ProductService(productDao);
+    public ProductController(ProductService productService){
+        // Don't create it yourself - facilitate auto-wiring
+        // Assume a service class will be provided by spring boot as a parameter
+        this.productService = productService;
     }
 
     @GetMapping(path="/{productCode}", produces="application/json")

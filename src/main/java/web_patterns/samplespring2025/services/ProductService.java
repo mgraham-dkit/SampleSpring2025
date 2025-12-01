@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 @Slf4j
+// Mark this class as a service layer - spring boot will know to load it and pass it to controllers where appropriate
+@Service
 public class ProductService {
     private ProductDao productDao;
 

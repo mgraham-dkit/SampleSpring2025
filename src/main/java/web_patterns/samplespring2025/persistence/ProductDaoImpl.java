@@ -2,7 +2,7 @@ package web_patterns.samplespring2025.persistence;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import web_patterns.samplespring2025.entities.Product;
 
 import java.sql.Connection;
@@ -13,6 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
+// Mark this class as a repository (a class that is used to access data)
+// This will allow Spring boot to recognise it as something a service will need
+@Repository
 public class ProductDaoImpl implements ProductDao {
     private Connector connector;
 

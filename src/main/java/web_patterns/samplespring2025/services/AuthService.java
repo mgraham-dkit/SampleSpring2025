@@ -1,7 +1,6 @@
 package web_patterns.samplespring2025.services;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
 import web_patterns.samplespring2025.persistence.UserDao;
 
@@ -9,10 +8,10 @@ import java.sql.SQLException;
 
 @Slf4j
 @Service
-public class UserService {
+public class AuthService {
     private UserDao userDao;
 
-    public UserService(UserDao dao){
+    public AuthService(UserDao dao){
         this.userDao = dao;
     }
 
